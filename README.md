@@ -1,2 +1,2 @@
-# wordpress-headless-with-react
-Wordpress Headless With React
+# Wordpress Headless With React
+...
