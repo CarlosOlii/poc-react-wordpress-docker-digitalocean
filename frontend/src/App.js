@@ -9,7 +9,8 @@ function App() {
 
     useEffect(() => {
         async function loadPage() {
-            const response = await fetch('http://localhost:8001/wp-json/wp/v2/pages/2');
+            const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8001';
+            const response = await fetch(baseUrl + '/wp-json/wp/v2/pages/2');
             if (!response.ok) {
                 return;
             }

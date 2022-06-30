@@ -1,0 +1,43 @@
+version: '3.6'
+
+services:
+  # react
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - 80:80
+    image: wordpress-headless-with-react_frontend:0.2.0
+    restart: unless-stopped
+
+  # wordpress
+  backend:
+    image: wordpress:latest
+    volumes:
+      - ./backend:/var/www/html
+    ports:
+      - 8001:80
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - db
+
+  # database
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+volumes:
+  db_data: {}
