@@ -7,6 +7,7 @@ The main objective of this project is to create a react app using wordpress serv
 - Jest
 - Wordpress
 - DigitalOcean API
+- NPM
 
 ## Development
 ### Start: `docker-compose up`
