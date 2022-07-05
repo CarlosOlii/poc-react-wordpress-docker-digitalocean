@@ -1,5 +1,7 @@
-# Wordpress Headless With React App
-The main objective of this project is to create a react app using wordpress serverless.
+# React App, Wordpress, Docker and DigitalOcean API 
+A possible way to integrate frontend using *React* with **WordPress** as backend. \
+Using **docker** for local development and production. \
+Integrated with **Digitalocean API** to create droplet and deploy.
 
 # Stack
 - Docker
@@ -7,7 +9,6 @@ The main objective of this project is to create a react app using wordpress serv
 - Jest
 - Wordpress
 - DigitalOcean API
-- NPM
 
 ## Development
 ### Start: `docker-compose up`
