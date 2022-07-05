@@ -1,4 +1,4 @@
-# React App, Wordpress, Docker and DigitalOcean API 
+# POC :: React App, Wordpress, Docker and DigitalOcean API 
 A possible way to integrate frontend using **React** with **WordPress** as backend. \
 Using **docker** for local development and production. \
 Integrated with **Digitalocean API** to create droplet and deploy.
